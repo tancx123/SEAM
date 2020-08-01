@@ -1,4 +1,4 @@
-package com.example.seam.ui.tools;
+package com.example.seam.ui.salesOrders;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.seam.R;
 
-public class ToolsFragment extends Fragment {
+public class salesOrdersFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private salesOrdersViewModel salesOrdersViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        salesOrdersViewModel =
+                ViewModelProviders.of(this).get(salesOrdersViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_sales_orders, container, false);
+        final TextView textView = root.findViewById(R.id.text_gallery);
+        salesOrdersViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
