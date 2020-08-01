@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.seam.ui.home.HomeFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_sales_orders"
+        android:name="com.example.seam.ui.gallery.GalleryFragment"
+        android:label="@string/menu_sales_orders"
+        tools:layout="@layout/fragment_sales_orders" />
+
+    <fragment
+        android:id="@+id/nav_packages"
+        android:name="com.example.seam.ui.packages.PackagesFragment"
+        android:label="@string/menu_packages"
+        tools:layout="@layout/fragment_packages" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.seam.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.seam.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.seam.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+</navigation>
