@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoice_main_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:elevation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.invoices.add_new_invoice">
+    tools:context=".ui.invoice.add_new_invoice"
+    android:layout_marginTop="?attr/actionBarSize">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray" >
+        android:background="@color/grey_background_layout">
 
         <TextView
             android:id="@+id/group_invoice_info"
-            android:layout_width="400dp"
-            android:layout_height="450dp"
+            android:layout_width="0dp"
+            android:layout_height="520dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
             android:background="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -29,12 +48,11 @@
             android:id="@+id/text_customer_name_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="15dp"
             android:text="Customer Name *"
-            app:layout_constraintEnd_toEndOf="@+id/group_invoice_info"
-            app:layout_constraintHorizontal_bias="0.136"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/group_invoice_info"
             app:layout_constraintTop_toTopOf="@+id/group_invoice_info" />
 
@@ -43,10 +61,9 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="Customer Name"
-            android:padding="5dp"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_customer_name_title"
@@ -58,6 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Invoice Number *"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/text_customer_name_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_customer_name_input"
@@ -68,8 +87,6 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="INV-0003"
             app:layout_constraintEnd_toEndOf="@+id/text_invoice_num"
@@ -83,6 +100,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Order Number"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/text_invoice_num_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_invoice_num_input"
@@ -93,10 +112,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="ORD-0003"
-            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/text_order_num"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_order_num"
@@ -108,6 +125,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Invoice Date"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/text_order_num_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_order_num_input"
@@ -118,10 +137,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="01 AUG 2019"
-            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/text_invoice_date"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_invoice_date"
@@ -133,6 +150,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Due Date"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/text_invoice_date_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_invoice_date_input"
@@ -143,11 +162,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="01 AUG 2019"
-            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/text_due_date"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_due_date"
@@ -155,12 +171,11 @@
 
         <TextView
             android:id="@+id/group_item_info"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:background="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -168,20 +183,20 @@
 
         <Button
             android:id="@+id/add_line_item_btn"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:text="Add Line Item"
             app:layout_constraintBottom_toBottomOf="@+id/group_item_info"
             app:layout_constraintEnd_toEndOf="@+id/group_item_info"
-            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/group_item_info"
             app:layout_constraintTop_toTopOf="@+id/group_item_info" />
 
         <TextView
             android:id="@+id/group_terms_condition"
-            android:layout_width="400dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
@@ -198,10 +213,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="15dp"
             android:text="Customer Notes"
-            app:layout_constraintEnd_toEndOf="@+id/group_terms_condition"
-            app:layout_constraintHorizontal_bias="0.09"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/group_terms_condition"
             app:layout_constraintTop_toTopOf="@+id/group_terms_condition" />
 
@@ -210,10 +224,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
             android:hint="Thanks for you business"
-            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/text_customer_note"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_customer_note"
@@ -225,6 +237,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Terms and Conditions"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/text_customer_note_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_customer_note_input"
@@ -235,9 +249,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edit_rectangle"
             android:ems="10"
-            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="@+id/text_terms_condition"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/text_terms_condition"
@@ -246,3 +258,5 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
+
+</RelativeLayout>
