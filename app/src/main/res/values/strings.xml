@@ -17,6 +17,9 @@
     <!-- Add New Package -->
     <string name="select_item_hint">You can manually include items to be packed from the sales order by enabling the above option</string>
 
+    <!-- Add New Shipment -->
+    <string name="shipment_package">Start Typing to select package</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

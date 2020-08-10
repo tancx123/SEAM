@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.salesOrders.add_package"></activity>
+        <activity android:name=".ui.salesOrders.add_shipment"></activity>
+        <activity android:name=".ui.salesOrders.add_package" />
         <activity android:name=".ui.customer.new_customer" />
         <activity android:name=".ui.salesOrders.add_sales_line_item" />
         <activity android:name=".ui.salesOrders.add_sales_orders" />
