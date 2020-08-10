@@ -35,7 +35,7 @@
             <TextView
                 android:id="@+id/group_customer_info"
                 android:layout_width="0dp"
-                android:layout_height="620dp"
+                android:layout_height="720dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="68dp"
@@ -240,6 +240,30 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_phone" />
 
             <TextView
+                android:id="@+id/text_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Address"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/text_phone_input"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_phone_input"
+                app:layout_constraintTop_toBottomOf="@+id/text_phone_input" />
+
+            <EditText
+                android:id="@+id/text_address_input"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="@+id/text_address"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_address"
+                app:layout_constraintTop_toBottomOf="@+id/text_address" />
+
+            <TextView
                 android:id="@+id/group_other_info"
                 android:layout_width="0dp"
                 android:layout_height="300dp"
@@ -315,28 +339,6 @@
                 app:layout_constraintStart_toStartOf="@+id/text_payment_terms"
                 app:layout_constraintTop_toBottomOf="@+id/text_payment_terms" />
 
-            <Button
-                android:id="@+id/add_billing_address_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="Add Billing and Shipping Address"
-                android:background="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/group_other_info" />
-
-            <Button
-                android:id="@+id/add_contact_person_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/white"
-                android:text="Add Contact Person"
-                app:layout_constraintEnd_toEndOf="@+id/add_billing_address_btn"
-                app:layout_constraintStart_toStartOf="@+id/add_billing_address_btn"
-                app:layout_constraintTop_toBottomOf="@+id/add_billing_address_btn" />
-
             <TextView
                 android:id="@+id/group_remark"
                 android:layout_width="0dp"
@@ -347,7 +349,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.454"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_contact_person_btn"
+                app:layout_constraintTop_toBottomOf="@+id/group_other_info"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
